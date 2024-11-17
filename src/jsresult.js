@@ -117,11 +117,6 @@ export class Result {
           return Result.Err(new Error("Function returned undefined"));
         }
   
-        // null 처리
-        if (result === null) {
-          return Result.Err(new Error("Function returned null"));
-        }
-  
         // NaN 처리 (숫자 연산에서만 발생)
         if (typeof result === "number" && Number.isNaN(result)) {
           return Result.Err(new Error("Function returned NaN"));
