@@ -151,7 +151,6 @@ Cloning and Using the Project
 Since the project is hosted on GitHub, you can clone it and include it in your project:
 
 ```bash
-코드 복사
 git clone https://github.com/yourusername/jsresult.git
 ```
 Include jsresult.js in your project files and import it as shown in the examples.
