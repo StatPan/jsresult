@@ -11,7 +11,7 @@ Installation
 Since this package is not published on npm, you can clone it directly from GitHub:
 
 ```bash
-git clone https://github.com/yourusername/jsresult.git
+git clone https://github.com/StatPan/jsresult.git
 ```
 Include the jsresult.js file in your project.
 
@@ -155,6 +155,41 @@ Since the project is hosted on GitHub, you can clone it and include it in your p
 git clone https://github.com/yourusername/jsresult.git
 ```
 Include jsresult.js in your project files and import it as shown in the examples.
+
+* Including jsresult.js Directly from GitHub
+GitHub serves raw files via the raw.githubusercontent.com domain. You can use this to include your JavaScript file in your HTML page.
+* Example:
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jsresult Example</title>
+</head>
+<body>
+  <script type="module">
+    import { wrapWithResult } from 'https://raw.githubusercontent.com/yourusername/jsresult/main/jsresult.js';
+
+    function divide(a, b) {
+      return a / b;
+    }
+
+    const safeDivide = wrapWithResult(divide);
+
+    const result = safeDivide(10, 0);
+
+    if (result.isOk()) {
+      console.log(`Success: ${result.unwrap()}`);
+    } else {
+      console.error(`Error: ${result.error.message}`);
+    }
+  </script>
+</body>
+</html>
+```
+
+
+
+<br>
 
 ## Conclusion
 jsresult.js provides a way to handle errors and optional values in JavaScript functions elegantly, inspired by Rust's Result and Option types. By wrapping your functions, you can focus on business logic while jsresult.js handles error checking and value existence.
