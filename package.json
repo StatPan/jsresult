@@ -1,0 +1,10 @@
+{
+    "name": "js_result",
+    "version": "1.0.0",
+    "type": "module",
+    "main": "./src/jsresult.js",
+    "scripts": {
+      "test": "node ./src/index.js"
+    }
+  }
+  
