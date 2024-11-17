@@ -151,7 +151,7 @@ Cloning and Using the Project
 Since the project is hosted on GitHub, you can clone it and include it in your project:
 
 ```bash
-git clone https://github.com/yourusername/jsresult.git
+git clone https://github.com/StatPan/jsresult.git
 ```
 Include jsresult.js in your project files and import it as shown in the examples.
 
@@ -166,7 +166,7 @@ GitHub serves raw files via the raw.githubusercontent.com domain. You can use th
 </head>
 <body>
   <script type="module">
-    import { wrapWithResult } from 'https://raw.githubusercontent.com/yourusername/jsresult/main/jsresult.js';
+    import { wrapWithResult } from 'https://raw.githubusercontent.com/StatPan/jsresult/main/jsresult.js';
 
     function divide(a, b) {
       return a / b;
