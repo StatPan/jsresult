@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jsresult Example</title>
+  <script type="module">
+    import { wrapWithResult } from './jsresult.js';
+
+    // Test function
+    function divide(a, b) {
+      return a / b;
+    }
+
+    const safeDivide = wrapWithResult(divide);
+
+    console.log(safeDivide(10, 2)); // Result.Ok
+    console.log(safeDivide(10, 0)); // Result.Err
+    console.log(safeDivide(undefined, 5)); // Result.Err
+    console.log(safeDivide(5, null)); // Result.Err
+  </script>
+</head>
+<body>
+  <h1>Check the Console for Results</h1>
+</body>
+</html>
